@@ -1,0 +1,8 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=4744
+
+Unbundle activates Vim scripts from isolated directories by adding them to
+Vim's runtimepath and building missing helptags for documentation therein.
+
+It's like vimscript #2332 but with filetype-specific bundles and less code.
+
+See https://github.com/sunaku/vim-unbundle#readme for more information.
