@@ -6,14 +6,17 @@ For the initiated, it's like [pathogen.vim] but with *ftbundles* and less code.
 
 ## Terminology
 
-**bundles** are [Vim scripts] that are stored in isolated directories under
-`bundle/` subdirectories of directories specified in Vim's *runtimepath*.  For
-example, `~/.vim/bundle/*/` would be your *bundles* if you were using Unix.
+**bundles** are [Vim scripts] that are stored in isolated `bundle/*/` directories
+(by default; but this is configurable via `g:unbundle_bundles_glob`) found
+within Vim's *runtimepath* array.  For example, `~/.vim/bundle/*/` would be
+your *bundles* by default if you were using Unix.
 
-**ftbundles** are *filetype*-specific *bundles* that are loaded lazily (only
-when they are necessary) to shorten Vim's startup time.  For example,
-`~/.vim/ftbundle/{filetype}/*/` would be your *ftbundles* for `{filetype}` if
-you were using Unix.
+**ftbundles** are *filetype*-specific *bundles* that are loaded lazily, as and
+when they are necessary, to shorten Vim's startup time.  Similar to
+*bundles*, they are stored in isolated `ftbundle/{filetype}/*/` directories
+(by default; but this is configurable via `g:unbundle_ftbundles_glob`) found
+within Vim's *runtimepath* array. For example, `~/.vim/ftbundle/{filetype}/*/`
+would be your *ftbundles* for `{filetype}` by default if you were using Unix.
 
 ## Requirements
 
@@ -22,16 +25,15 @@ you were using Unix.
 ## Installation
 
 1. Clone this Git repository or [download its contents][downloads] into a new
-   `bundle/vim-unbundle` subdirectory inside your Vim runtime directory.  For
-   example, `~/.vim/bundle/vim-unbundle` would be the corect location in Unix.
+   `vim-unbundle` subdirectory inside your Vim runtime directory.  For
+   example, `~/.vim/vim-unbundle` would be the correct location in Unix.
 
-        cd ~/.vim/bundle/
-        git clone git://github.com/sunaku/vim-unbundle.git
+        git clone https://github.com/sunaku/vim-unbundle.git ~/.vim/vim-unbundle
 
 2. Run the following command inside Vim to start using Unbundle immediately,
    or add it to your *vimrc* file to start Unbundle whenever you start Vim.
 
-        :runtime bundle/vim-unbundle/unbundle.vim
+        :runtime vim-unbundle/plugin/unbundle.vim
 
 3. Run the following command inside Vim to learn more about using Unbundle.
 
